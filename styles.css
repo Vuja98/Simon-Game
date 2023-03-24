@@ -9,7 +9,10 @@ body {
   margin: 5%;
   color: #fef2bf;
 }
-
+.start {
+  font-size: 24px;
+  padding: 10px 30px;
+}
 .container {
   display: block;
   width: 50%;
