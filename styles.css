@@ -1,8 +1,11 @@
 body {
   text-align: center;
   background-color: #011f3f;
+  height: 100vh;
 }
-
+html {
+  font-size: 62.5%;
+}
 #level-title {
   font-family: "Press Start 2P", cursive;
   font-size: 3rem;
@@ -17,29 +20,62 @@ body {
   background-color: transparent;
   border: 2px solid #fef2bf;
   padding: 1rem;
+  cursor: pointer;
 }
 
-@media only screen and (min-width: 900px) {
-  .start {
-    display: none;
-  }
+.start:hover {
+  border-color: #ffe77e;
+  color: rgb(255, 231, 126);
+  background-color: rgba(255, 231, 126, 0.1);
 }
+
 .container {
   display: block;
   width: 50%;
   margin: auto;
 }
-
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
 .btn {
   cursor: pointer;
-  margin: 25px;
-  display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
+  margin: 2.5rem;
+  display: block;
+  height: 20rem;
+  width: 20rem;
+  border: 1rem solid black;
   border-radius: 20%;
 }
-
+@media only screen and (max-width: 900px) {
+  .start {
+    display: inline;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn {
+    cursor: pointer;
+    margin: 2rem;
+    display: block;
+    height: 15rem;
+    width: 15rem;
+    border: 1rem solid black;
+    border-radius: 20%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .start {
+    display: none;
+  }
+}
 .game-over {
   background-color: red;
   opacity: 0.8;
@@ -62,6 +98,6 @@ body {
 }
 
 .pressed {
-  box-shadow: 0 0 20px white;
+  box-shadow: 0 0 2rem white;
   background-color: grey;
 }
