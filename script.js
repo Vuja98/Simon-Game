@@ -17,8 +17,14 @@ $(document).keypress(function () {
 $(".start").click(function () {
   if (!started) {
     $("#level-title").text("Level " + level);
+    $(".start").text("Restart");
     nextSequence();
     started = true;
+    if (started) {
+      $(".start").click(function () {
+        startOver();
+      });
+    }
   }
 });
 
